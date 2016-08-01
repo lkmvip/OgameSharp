@@ -9,7 +9,7 @@ namespace Ogame.Gameplay
     /// <summary>
     /// Structure.
     /// </summary>
-    abstract class Structure
+    public abstract class Structure : Buildable
     {
 
     }

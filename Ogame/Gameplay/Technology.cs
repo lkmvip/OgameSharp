@@ -9,13 +9,9 @@ namespace Ogame.Gameplay
     /// <summary>
     /// A technology.
     /// </summary>
-    public class Technology
+    public class Technology : Buildable
     {
         short id;
         byte level;
-        string name;
-        string description;
-        float timeResearch;
-        Cost cost;
     }
 }

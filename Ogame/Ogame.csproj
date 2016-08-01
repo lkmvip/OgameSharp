@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gameplay\Cost.cs" />
-    <Compile Include="Gameplay\IBuildable.cs" />
+    <Compile Include="Gameplay\Buildable.cs" />
     <Compile Include="Gameplay\Planet.cs" />
     <Compile Include="Gameplay\Ship.cs" />
     <Compile Include="Gameplay\Structure.cs" />

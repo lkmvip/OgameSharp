@@ -7,19 +7,15 @@ namespace Ogame.Gameplay
     /// <summary>
     /// A ship.
     /// </summary>
-    public class Ship
+    public class Ship : Buildable
     {
-        string name;
-        string description;
         int speed;
         int attack;
         int structurePoints;
         int shieldPower;
         int cargoCapacity;
-        float timeBuild;
         short id;
         short fuelConsumption;
-        Cost cost;
         Dictionary<short, short> rapidFires;
 
         /// <summary>
