@@ -13,6 +13,7 @@ namespace Ogame.Gameplay
         string description;
         int speed;
         int attack;
+        int leaul; //for test purpose.
         int structurePoints;
         int shieldPower;
         int cargoCapacity;
