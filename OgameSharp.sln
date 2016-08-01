@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ogame", "Ogame\Ogame.csproj", "{14AA554E-0454-4F77-9A87-C493917CE96A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgameServer", "OgameServer\OgameServer.csproj", "{828A7A12-8B16-418A-92AC-106D969EE3DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OgameClient", "OgameClient\OgameClient.csproj", "{7C3EA456-3F88-4653-96BF-3A92AA14F23C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{14AA554E-0454-4F77-9A87-C493917CE96A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14AA554E-0454-4F77-9A87-C493917CE96A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14AA554E-0454-4F77-9A87-C493917CE96A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{828A7A12-8B16-418A-92AC-106D969EE3DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{828A7A12-8B16-418A-92AC-106D969EE3DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{828A7A12-8B16-418A-92AC-106D969EE3DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{828A7A12-8B16-418A-92AC-106D969EE3DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3EA456-3F88-4653-96BF-3A92AA14F23C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3EA456-3F88-4653-96BF-3A92AA14F23C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3EA456-3F88-4653-96BF-3A92AA14F23C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3EA456-3F88-4653-96BF-3A92AA14F23C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
