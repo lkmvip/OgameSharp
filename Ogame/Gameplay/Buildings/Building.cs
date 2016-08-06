@@ -11,8 +11,8 @@ namespace Ogame.Gameplay.Buildings
     /// </summary>
     public abstract class Building : Buyable
     {
-        short level;
-        float costFactor;
+        protected short level;
+        protected float costFactor;
         Resource currentCost;
     }
 }
