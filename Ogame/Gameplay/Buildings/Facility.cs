@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ogame.Gameplay
+namespace Ogame.Gameplay.Buildings
 {
-    /// <summary>
-    /// Structure.
-    /// </summary>
-    public abstract class Facility : Buyable
+    public class Facility : Building
     {
 
     }

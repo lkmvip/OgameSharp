@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gameplay\Buildings\Facility.cs" />
+    <Compile Include="Gameplay\Buildings\ResourceBuilding.cs" />
     <Compile Include="Gameplay\Resource.cs" />
     <Compile Include="Gameplay\Buyable.cs" />
     <Compile Include="Gameplay\Planet.cs" />
     <Compile Include="Gameplay\Ship.cs" />
-    <Compile Include="Gameplay\Facility.cs" />
+    <Compile Include="Gameplay\Buildings\Building.cs" />
     <Compile Include="Gameplay\Technology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
