@@ -14,14 +14,14 @@ namespace Ogame.Gameplay
         protected string name;
         protected string description;
         protected float time;
-        protected Cost cost;
+        protected Resource cost;
 
         /// <summary>
         /// Check if the buildable can be build.
         /// </summary>
         /// <param name="cost">Cost from the player.</param>
         /// <returns>True if the player can build it, otherwise false.</returns>
-        public bool CanBuild(Cost cost)
+        public bool CanBuild(Resource cost)
         {
             return true;
         }

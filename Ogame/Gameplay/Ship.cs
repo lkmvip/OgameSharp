@@ -32,7 +32,7 @@ namespace Ogame.Gameplay
         /// <param name="fuelConsumption">Fuel consumption of the ship.</param>
         /// <param name="cost">Cost of the ship.</param>
         /// <param name="rapidFires">Rapid fires of the ship.</param>
-        public Ship(short id, string name, string description, int speed, int attack, int structurePoints, int shieldPower, int cargoCapacity, short fuelConsumption, Cost cost, Dictionary<short, short> rapidFires)
+        public Ship(short id, string name, string description, int speed, int attack, int structurePoints, int shieldPower, int cargoCapacity, short fuelConsumption, Resource cost, Dictionary<short, short> rapidFires)
         {
             this.id = id;
             this.name = name;

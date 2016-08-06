@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gameplay\Cost.cs" />
+    <Compile Include="Gameplay\Resource.cs" />
     <Compile Include="Gameplay\Buildable.cs" />
     <Compile Include="Gameplay\Planet.cs" />
     <Compile Include="Gameplay\Ship.cs" />
