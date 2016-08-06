@@ -9,7 +9,7 @@ namespace Ogame.Gameplay
     /// <summary>
     /// Implements everything for a buildable component.
     /// </summary>
-    public abstract class Buildable
+    public abstract class Buyable
     {
         protected string name;
         protected string description;
@@ -40,6 +40,14 @@ namespace Ogame.Gameplay
         public string Description
         {
             get { return description; }
+        }
+
+        /// <summary>
+        /// Get the time to build / research.
+        /// </summary>
+        public float Time
+        {
+            get { return time; }
         }
     }
 }

@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 namespace Ogame.Gameplay
 {
     /// <summary>
-    /// A technology.
+    /// Structure.
     /// </summary>
-    public class Technology : Buyable
+    public abstract class Facility : Buyable
     {
-        short id;
-        byte level;
+
     }
 }

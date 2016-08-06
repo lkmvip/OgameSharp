@@ -19,7 +19,7 @@ namespace Ogame.Gameplay
         short maxTemperature;
         Resource resource;
         List<Ship> ships;
-        List<Structure> structures;
+        List<Facility> structures;
 
         /// <summary>
         /// Constructor.
@@ -32,7 +32,7 @@ namespace Ogame.Gameplay
         /// <param name="minTemperature">Minimum temperature of the planet.</param>
         /// <param name="maxTemperature">Maximum temperature of the planet.</param>
         /// <param name="structures">List of the structures built on the planet.</param>
-        public Planet(string name, short maxFields, Resource resource, short fields, bool isHomeworld, short minTemperature, short maxTemperature, List<Ship> ships, List<Structure> structures)
+        public Planet(string name, short maxFields, Resource resource, short fields, bool isHomeworld, short minTemperature, short maxTemperature, List<Ship> ships, List<Facility> structures)
         {
             this.name = name;
             this.maxFields = maxFields;
@@ -49,7 +49,7 @@ namespace Ogame.Gameplay
         /// Add a structure.
         /// </summary>
         /// <param name="structure">Structure to add.</param>
-        public void AddStructure(Structure structure)
+        public void AddStructure(Facility structure)
         {
             if (!IsFull())
             {
@@ -61,7 +61,7 @@ namespace Ogame.Gameplay
         /// Remove a structure.
         /// </summary>
         /// <param name="structure">Structure to remove.</param>
-        public void RemoveStructure(Structure structure)
+        public void RemoveStructure(Facility structure)
         {
             structures.Remove(structure);
         }

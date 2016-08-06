@@ -7,7 +7,7 @@ namespace Ogame.Gameplay
     /// <summary>
     /// A ship.
     /// </summary>
-    public class Ship : Buildable
+    public class Ship : Buyable
     {
         int speed;
         int attack;

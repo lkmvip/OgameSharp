@@ -41,10 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Gameplay\Resource.cs" />
-    <Compile Include="Gameplay\Buildable.cs" />
+    <Compile Include="Gameplay\Buyable.cs" />
     <Compile Include="Gameplay\Planet.cs" />
     <Compile Include="Gameplay\Ship.cs" />
-    <Compile Include="Gameplay\Structure.cs" />
+    <Compile Include="Gameplay\Facility.cs" />
     <Compile Include="Gameplay\Technology.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
