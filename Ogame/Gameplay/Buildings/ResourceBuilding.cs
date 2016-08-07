@@ -37,5 +37,14 @@ namespace Ogame.Gameplay.Buildings
             this.level = level;
             this.costFactor = costFactor;
         }
+
+        /// <summary>
+        /// Get the cost of the resource building.
+        /// </summary>
+        /// <returns>Current cost.</returns>
+        public override Resource GetCost()
+        {
+            return cost * (Math.Pow(costFactor, level - 1));
+        }
     }
 }

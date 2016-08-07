@@ -13,6 +13,21 @@ namespace Ogame.Gameplay.Buildings
     {
         protected short level;
         protected float costFactor;
-        Resource currentCost;
+
+        /// <summary>
+        /// Get the cost of the building.
+        /// </summary>
+        public abstract Resource GetCost();
+
+        /// <summary>
+        /// Get the time to build the building.
+        /// </summary>
+        /// <returns>Time in seconds.</returns>
+        public float GetTime()
+        {
+            Resource cost = GetCost();
+
+            return (cost.Metal * cost.Crystal) / 2500f;
+        }
     }
 }

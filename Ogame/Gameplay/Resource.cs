@@ -42,5 +42,23 @@ namespace Ogame.Gameplay
             Deuterium = deuterium;
             Energy = energy;
         }
+
+        /// <summary>
+        /// Overriding the multiplication operator.
+        /// </summary>
+        /// <param name="r1">Resource to multiply.</param>
+        /// <param name="factor">Factor.</param>
+        /// <returns>Multiplied resource.</returns>
+        public static Resource operator *(Resource r1, double factor)
+        {
+            Resource resource = new Resource();
+
+            resource.Metal = (long)(r1.Metal * factor);
+            resource.Crystal = (long)(r1.Crystal * factor);
+            resource.Deuterium = (long)(r1.Deuterium * factor);
+            resource.Energy = (long)(r1.Energy * factor);
+
+            return resource;
+        }
     }
 }

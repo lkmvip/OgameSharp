@@ -8,6 +8,9 @@ namespace Ogame.Gameplay.Buildings
 {
     public class Facility : Building
     {
-
+        public override Resource GetCost()
+        {
+            return cost;
+        }
     }
 }
