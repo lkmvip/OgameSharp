@@ -12,6 +12,7 @@ namespace Ogame.Gameplay
     public class Technology : Buyable
     {
         byte level;
+        float costFactor;
         Dictionary<short, short> requirements;
 
         /// <summary>
@@ -46,7 +47,7 @@ namespace Ogame.Gameplay
         /// <summary>
         /// Get the prerequisites for the technology.
         /// </summary>
-        public Dictionary<short, short> Prerequisites
+        public Dictionary<short, short> Requirements
         {
             get { return requirements; }
         }
