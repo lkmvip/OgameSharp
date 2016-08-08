@@ -25,17 +25,10 @@ namespace Ogame.Gameplay.Buildings
         /// <param name="production"></param>
         /// <param name="level"></param>
         /// <param name="costFactor"></param>
-        public ResourceBuilding(short id, string name, string description, float time, Resource cost, Resource production, Resource capacity, short level, float costFactor)
+        public ResourceBuilding(short id, string name, string description, float time, Resource cost, Resource production, Resource capacity, short level, float costFactor) : base(id, name, description, time, cost, level, costFactor)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.time = time;
-            this.cost = cost;
             this.production = production;
             this.capacity = capacity;
-            this.level = level;
-            this.costFactor = costFactor;
         }
 
         /// <summary>

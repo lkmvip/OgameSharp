@@ -14,6 +14,12 @@ namespace Ogame.Gameplay.Buildings
         protected short level;
         protected float costFactor;
 
+        public Building(short id, string name, string description, float time, Resource cost, short level, float costFactor) : base(id, name, description, time, cost)
+        {
+            this.level = level;
+            this.costFactor = costFactor;
+        }
+
         /// <summary>
         /// Get the cost of the building.
         /// </summary>

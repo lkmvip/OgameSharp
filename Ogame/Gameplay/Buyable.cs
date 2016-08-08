@@ -17,6 +17,15 @@ namespace Ogame.Gameplay
         protected float time;
         protected Resource cost;
 
+        public Buyable(short id, string name, string description, float time, Resource cost)
+        {
+            this.id = id;
+            this.name = name;
+            this.description = description;
+            this.time = time;
+            this.cost = cost;
+        }
+
         /// <summary>
         /// Check if the buyable can be buy.
         /// </summary>
@@ -67,6 +76,13 @@ namespace Ogame.Gameplay
         public float Time
         {
             get { return time; }
+        }
+
+        public enum Type
+        {
+            Ship = 0,
+            Technology = 1,
+            Building = 2
         }
     }
 }

@@ -25,13 +25,9 @@ namespace Ogame.Gameplay
         /// <param name="cost">Cost of the technology.</param>
         /// <param name="level">Level of the technology.</param>
         /// <param name="requirements">Requirements for the technology.</param>
-        public Technology(short id, string name, string description, float time, Resource cost, byte level, Dictionary<short,short> requirements)
+        public Technology(short id, string name, string description, float time, Resource cost, byte level, float costFactor, Dictionary<short, short> requirements) : base(id, name, description, time, cost)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.time = time;
-            this.cost = cost;
+            this.costFactor = costFactor;
             this.level = level;
             this.requirements = requirements;
         }
