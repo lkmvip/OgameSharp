@@ -14,10 +14,21 @@ namespace Ogame.Gameplay.Buildings
         protected short level;
         protected float costFactor;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="id">Id of the resource building.</param>
+        /// <param name="name">Name of the resource building.</param>
+        /// <param name="description">Description of the resource building.</param>
+        /// <param name="time">Time to build the resource building.</param>
+        /// <param name="cost">Cost to the build the resource building.</param>
+        /// <param name="level"></param>
+        /// <param name="costFactor"></param>
         public Building(short id, string name, string description, float time, Resource cost, short level, float costFactor) : base(id, name, description, time, cost)
         {
             this.level = level;
             this.costFactor = costFactor;
+            this.type = Type.Building;
         }
 
         /// <summary>
@@ -35,5 +46,6 @@ namespace Ogame.Gameplay.Buildings
 
             return (cost.Metal * cost.Crystal) / 2500f;
         }
+
     }
 }

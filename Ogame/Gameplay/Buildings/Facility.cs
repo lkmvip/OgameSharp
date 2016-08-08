@@ -24,6 +24,10 @@ namespace Ogame.Gameplay.Buildings
 
         }
 
+        /// <summary>
+        /// Get the cost of the facility.
+        /// </summary>
+        /// <returns>Primary cost of the facility.</returns>
         public override Resource GetCost()
         {
             return cost;

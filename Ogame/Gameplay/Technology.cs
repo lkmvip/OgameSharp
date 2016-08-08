@@ -13,7 +13,6 @@ namespace Ogame.Gameplay
     {
         byte level;
         float costFactor;
-        Dictionary<short, short> requirements;
 
         /// <summary>
         /// Constructor.
@@ -25,11 +24,10 @@ namespace Ogame.Gameplay
         /// <param name="cost">Cost of the technology.</param>
         /// <param name="level">Level of the technology.</param>
         /// <param name="requirements">Requirements for the technology.</param>
-        public Technology(short id, string name, string description, float time, Resource cost, byte level, float costFactor, Dictionary<short, short> requirements) : base(id, name, description, time, cost)
+        public Technology(short id, string name, string description, float time, Resource cost, byte level, float costFactor) : base(id, name, description, time, cost)
         {
             this.costFactor = costFactor;
             this.level = level;
-            this.requirements = requirements;
         }
 
         /// <summary>
@@ -38,14 +36,6 @@ namespace Ogame.Gameplay
         public byte Level
         {
             get { return level; }
-        }
-
-        /// <summary>
-        /// Get the prerequisites for the technology.
-        /// </summary>
-        public Dictionary<short, short> Requirements
-        {
-            get { return requirements; }
         }
     }
 }

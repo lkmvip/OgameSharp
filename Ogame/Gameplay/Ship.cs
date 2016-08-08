@@ -14,7 +14,6 @@ namespace Ogame.Gameplay
         int structurePoints;
         int shieldPower;
         int cargoCapacity;
-        short id;
         short fuelConsumption;
         Dictionary<short, short> rapidFires;
 
@@ -41,6 +40,7 @@ namespace Ogame.Gameplay
             this.cargoCapacity = cargoCapacity;
             this.fuelConsumption = fuelConsumption;
             this.rapidFires = rapidFires;
+            this.type = Type.Ship;
         }
     }
 }

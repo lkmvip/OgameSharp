@@ -15,8 +15,19 @@ namespace Ogame.Gameplay
         protected string name;
         protected string description;
         protected float time;
+        protected Type type;
         protected Resource cost;
+        protected Dictionary<short, short> requirementsTechnology;
+        protected Dictionary<short, short> requirementsBuilding;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="id">Id of the buyable.</param>
+        /// <param name="name">Name of the buyable.</param>
+        /// <param name="description">Description of the buyable.</param>
+        /// <param name="time">Time of the buyable.</param>
+        /// <param name="cost">Cost of the buyable.</param>
         public Buyable(short id, string name, string description, float time, Resource cost)
         {
             this.id = id;
@@ -24,6 +35,8 @@ namespace Ogame.Gameplay
             this.description = description;
             this.time = time;
             this.cost = cost;
+            this.requirementsBuilding = new Dictionary<short, short>();
+            this.requirementsTechnology = new Dictionary<short, short>();
         }
 
         /// <summary>
@@ -34,16 +47,6 @@ namespace Ogame.Gameplay
         public bool CanBuild(Resource cost)
         {
             return true;
-        }
-
-        /// <summary>
-        /// Enumeration of every category.
-        /// </summary>
-        public enum Category
-        {
-            Ship = 1,
-            Technology = 2,
-            Facility = 3
         }
 
         /// <summary>
@@ -78,11 +81,40 @@ namespace Ogame.Gameplay
             get { return time; }
         }
 
-        public enum Type
+        /// <summary>
+        /// Get the cost.
+        /// </summary>
+        public Resource Cost
         {
-            Ship = 0,
-            Technology = 1,
-            Building = 2
+            get { return cost; }
+        }
+
+        /// <summary>
+        /// Get or set the requirement for the buyable.
+        /// </summary>
+        public Dictionary<short, short> RequirementsTechnology
+        {
+            get { return requirementsTechnology; }
+            set { requirementsTechnology = value; }
+        }
+
+        /// <summary>
+        /// Get or set the requirement for the buyable.
+        /// </summary>
+        public Dictionary<short, short> RequirementsBuilding
+        {
+            get { return requirementsBuilding; }
+            set { requirementsBuilding = value; }
+        }
+
+        /// <summary>
+        /// Enumeration of every type of buyable.
+        /// </summary>
+        public enum Type : short
+        {
+            Ship = 1,
+            Technology = 2,
+            Building = 3
         }
     }
 }
