@@ -81,6 +81,9 @@ namespace OgameServer
         private void StartClick(object sender, RoutedEventArgs e)
         {
             DisplayText("Server is running ...");
+            buttonStart.IsEnabled = false;
+            buttonStop.IsEnabled = true;
+            buttonExecute.IsEnabled = true;
         }
 
         /// <summary>
@@ -89,6 +92,19 @@ namespace OgameServer
         private void StopClick(object sender, RoutedEventArgs e)
         {
             DisplayText("Server stopped ...");
+            buttonStart.IsEnabled = true;
+            buttonStop.IsEnabled = false;
+            buttonExecute.IsEnabled = false;
+        }
+
+        /// <summary>
+        /// Click on "Execute" button.
+        /// </summary>
+        private void ExecuteClick(object sender, RoutedEventArgs e)
+        {
+            DisplayCommand(textBoxCommandLine.Text);
+
+            textBoxCommandLine.Clear();
         }
     }
 }

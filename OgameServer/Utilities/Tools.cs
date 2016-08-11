@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OgameServer.Utilities
 {
+    /// <summary>
+    /// General tools for the server.
+    /// </summary>
     static public class Tools
     {
         /// <summary>
