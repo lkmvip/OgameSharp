@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,9 +33,18 @@ namespace OgameServer.Network
         /// </summary>
         /// <param name="ip">Ip of the game server.</param>
         /// <param name="port">Port the game server.</param>
-        public void Start(string ip, ushort port)
+        public void Start(ushort port)
         {
-            
+            tcpServer = new TcpListener(IPAddress.Any, port);
+            tcpServer.Start();
+        }
+
+        /// <summary>
+        /// Stop the game server.
+        /// </summary>
+        public void Stop()
+        {
+            tcpServer.Stop();
         }
 
         /// <summary>

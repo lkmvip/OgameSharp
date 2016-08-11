@@ -11,15 +11,43 @@ namespace OgameServer.Network
     /// </summary>
     public class MainServer
     {
-        string ip;
-        ushort port;
+        ushort portLogin;
+        ushort portGame;
         GameServer gameServer;
         LoginServer loginServer;
-        
-        public MainServer(string ip, ushort port,short productionRate, short speedRate)
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="ip">Ip of the game.</param>
+        /// <param name="portLogin">Port of the login server.</param>
+        /// <param name="portGame">Port of the game server.</param>
+        /// <param name="productionRate">Production rate.</param>
+        /// <param name="speedRate">Speed rate.</param>
+        public MainServer(ushort portLogin, ushort portGame, short productionRate, short speedRate)
         {
-            this.ip = ip;
-            this.port = port;
+            this.portLogin = portLogin;
+            this.portGame = portGame;
+            this.loginServer = new LoginServer();
+            this.gameServer = new GameServer(productionRate, speedRate);
+        }
+
+        /// <summary>
+        /// Start the main server.
+        /// </summary>
+        public void Start()
+        {
+            loginServer.Start(portLogin);
+            gameServer.Start(portGame);
+        }
+
+        /// <summary>
+        /// Stop the main server.
+        /// </summary>
+        public void Stop()
+        {
+            loginServer.Stop();
+            gameServer.Stop();
         }
     }
 }

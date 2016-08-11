@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using OgameServer.Utilities;
+using OgameServer.Network;
 
 namespace OgameServer
 {
@@ -21,6 +22,7 @@ namespace OgameServer
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainServer server;
         Color textColor;
         Color errorColor;
         Color commandColor;
@@ -37,6 +39,8 @@ namespace OgameServer
             errorColor = Color.FromRgb(255, 87, 87);
             commandColor = Color.FromRgb(234, 143, 107);
             timeColor = Color.FromRgb(127, 161, 177);
+
+            server = new MainServer(27000, 27100, 1, 1);
         }
 
         /// <summary>
@@ -80,7 +84,15 @@ namespace OgameServer
         /// </summary>
         private void StartClick(object sender, RoutedEventArgs e)
         {
-            DisplayText("Server is running ...");
+            // Start the main server
+            server.Start();
+
+            // Display the notices about the servers
+            DisplayText("Main server is running ...");
+            DisplayText("Login server is running ...");
+            DisplayText("Game server is running ...");
+
+            // Enable and disable the buttons
             buttonStart.IsEnabled = false;
             buttonStop.IsEnabled = true;
             buttonExecute.IsEnabled = true;
@@ -91,7 +103,13 @@ namespace OgameServer
         /// </summary>
         private void StopClick(object sender, RoutedEventArgs e)
         {
-            DisplayText("Server stopped ...");
+            // Stop the main server
+            server.Stop();
+
+            // Display the notices about the servers
+            DisplayText("Servers stopped ...");
+
+            // Enable and disable the buttons
             buttonStart.IsEnabled = true;
             buttonStop.IsEnabled = false;
             buttonExecute.IsEnabled = false;
@@ -102,9 +120,26 @@ namespace OgameServer
         /// </summary>
         private void ExecuteClick(object sender, RoutedEventArgs e)
         {
-            DisplayCommand(textBoxCommandLine.Text);
+            // Save the command
+            string command = textBoxCommandLine.Text;
 
+            // Handle the command 
+            HandleCommand(command);
+
+            // Display the command in the console
+            DisplayCommand(command);
+
+            // Clear the command line
             textBoxCommandLine.Clear();
+        }
+
+        /// <summary>
+        /// Handle a command written by the user.
+        /// </summary>
+        /// <param name="command">Command in string format.</param>
+        private void HandleCommand(string command)
+        {
+
         }
     }
 }
