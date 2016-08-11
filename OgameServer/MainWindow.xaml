@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OgameServer"
         mc:Ignorable="d"
-        Title="OgameSharp Server" Height="416.4" Width="645" WindowStartupLocation="CenterScreen">
-    <Grid>
-
+        Title="Ogame # Server" Height="430.8" Width="645" WindowStartupLocation="CenterScreen" Background="#FF0E3449" Grid.IsSharedSizeScope="True" WindowStyle="ToolWindow" >
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF1F5878"/>
+            <Setter Property="Foreground" Value="#FF97F5FF"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF97F5FF"/>
+                    <Setter Property="Foreground" Value="#FF1F5878"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,3.4,0.4">
+        <RichTextBox Background="#FF071C27" BorderBrush="#FF174E6C" BorderThickness="1" Foreground="#FFEACE6B" IsReadOnly="True" IsReadOnlyCaretVisible="False" Name="rtbConsole" TextOptions.TextFormattingMode="Display" FontFamily="Consolas" FontSize="10" FontStretch="Condensed" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="8,34,10,45.4" />
+        <TextBox TextOptions.TextFormattingMode="Display" Background="#FF071C27" BorderBrush="#FF174E6C" FontFamily="Calibri" FontSize="14" Foreground="#FFBBBBBB" Height="23" Margin="8,0,86,16.4" Name="textBoxCommandLine" SelectionBrush="#FFB1D9FF" Text="" VerticalAlignment="Bottom" />
+        <Button Content="Start" FontFamily="Segoe UI" FontSize="12" Height="23" HorizontalAlignment="Right" Margin="0,6,69,0" Name="buttonStart" VerticalAlignment="Top" Width="50" Click="StartClick"  />
+        <Button Content="Stop" FontFamily="Segoe UI" FontSize="12" Height="23" HorizontalAlignment="Right" Margin="0,6,10,0" x:Name="buttonStop" VerticalAlignment="Top" Width="50" Click="StopClick" />
+        <Button Content="Execute" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Right" Margin="0,0,10,16.4" x:Name="buttonSend" Width="71" Height="23" VerticalAlignment="Bottom" />
+        <TextBlock TextOptions.TextFormattingMode="Display" Foreground="#FFD0D0D0" Height="18" HorizontalAlignment="Left" Margin="10,14,0,0" Text="Console" VerticalAlignment="Top" />
     </Grid>
 </Window>
