@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Network\GameServer.cs" />
+    <Compile Include="Network\LoginServer.cs" />
+    <Compile Include="Network\MainServer.cs" />
     <Compile Include="Utilities\Extensions.cs" />
     <Compile Include="Utilities\Tools.cs" />
     <Page Include="MainWindow.xaml">

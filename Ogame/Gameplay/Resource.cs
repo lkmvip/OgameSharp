@@ -60,5 +60,23 @@ namespace Ogame.Gameplay
 
             return resource;
         }
+
+        /// <summary>
+        /// Overriding the addition operator.
+        /// </summary>
+        /// <param name="r1">First resource</param>
+        /// <param name="r2">Second resource</param>
+        /// <returns>Additionned resources.</returns>
+        public static Resource operator +(Resource r1, Resource r2)
+        {
+            Resource resource = new Resource();
+
+            resource.Metal = r1.Metal + r2.Metal;
+            resource.Crystal = r1.Crystal + r2.Crystal;
+            resource.Deuterium = r1.Deuterium + r2.Deuterium;
+            resource.Energy = r1.Energy + r2.Energy;
+
+            return resource;
+        }
     }
 }

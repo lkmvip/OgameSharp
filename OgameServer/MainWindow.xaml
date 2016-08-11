@@ -27,6 +27,10 @@
                     <Setter Property="Background" Value="#FF97F5FF"/>
                     <Setter Property="Foreground" Value="#FF1F5878"/>
                 </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="#FF0E3049"/>
+                    <Setter Property="Foreground" Value="#FF1F5878"/>
+                </Trigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
@@ -35,7 +39,7 @@
         <TextBox TextOptions.TextFormattingMode="Display" Background="#FF071C27" BorderBrush="#FF174E6C" FontFamily="Calibri" FontSize="14" Foreground="#FFBBBBBB" Height="23" Margin="8,0,86,16.4" Name="textBoxCommandLine" SelectionBrush="#FFB1D9FF" Text="" VerticalAlignment="Bottom" />
         <Button Content="Start" FontFamily="Segoe UI" FontSize="12" Height="23" HorizontalAlignment="Right" Margin="0,5,88,0" Name="buttonStart" VerticalAlignment="Top" Width="71" Click="StartClick"  />
         <Button Content="Stop" FontFamily="Segoe UI" FontSize="12" Height="23" HorizontalAlignment="Right" Margin="0,5,10,0" x:Name="buttonStop" VerticalAlignment="Top" Width="71" Click="StopClick" IsEnabled="False" />
-        <Button Content="Execute" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Right" Margin="0,0,10,16.4" x:Name="buttonExecute" Width="71" Height="23" VerticalAlignment="Bottom" Click="ExecuteClick" />
+        <Button Content="Execute" FontFamily="Segoe UI" FontSize="12" HorizontalAlignment="Right" Margin="0,0,10,16.4" x:Name="buttonExecute" Width="71" Height="23" VerticalAlignment="Bottom" Click="ExecuteClick" IsEnabled="False" />
         <TextBlock TextOptions.TextFormattingMode="Display" Foreground="#FFD0D0D0" Height="18" HorizontalAlignment="Left" Margin="10,11,0,0" Text="Console" VerticalAlignment="Top" />
     </Grid>
 </Window>
